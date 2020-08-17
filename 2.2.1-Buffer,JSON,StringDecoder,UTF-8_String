@@ -1,0 +1,23 @@
+"use strict";
+
+let buf = new Buffer.from('123吃掉小星星');
+let json = JSON.stringify(buf);
+console.log('json', json);
+// console.log('JSON.parse(json).data', JSON.parse(json).data);
+let buf2 = new Buffer.from(JSON.parse(json).data);
+console.log('buf2', buf2.toString());
+console.log('buf2-slice', buf2.toString('utf8', 0 , 9));
+
+
+// ------------------------------
+console.log('\n\n');
+
+let StringDecoder = require('string_decoder').StringDecoder;
+let decoder = new StringDecoder('utf8');
+let euro = new Buffer.from([0xE2, 0x82]);
+let euro2 = new Buffer.from([0xAC]);
+console.log('decoder-euro: ', decoder.write(euro));
+console.log('decoder-euro2: ',decoder.write(euro2));
+console.log('euro.toString(): ',euro.toString());
+console.log('euro2.toString(): ',euro2.toString());
+
