@@ -41,9 +41,10 @@ ic.on('write', function(data) {
 
 ic.on('echo', function(data) {
     process.stdout.write(ic.name + ' wrote ' + data);
-    ic.on('end', () => {
-        process.exit();
-    })
+})
+
+ic.on('end', () => {
+    process.exit();
 })
 
 // capture input after setting encoding
