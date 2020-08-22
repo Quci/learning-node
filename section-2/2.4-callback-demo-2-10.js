@@ -17,7 +17,7 @@ writeStream.on('open', () => {
             files.forEach((name) => {
                 // modify contents
                 fs.readFile(`./data/${name}`, 'utf8', (err, data) => {
-                    let adjData = data.replace('/burningbird\.com/g', 'shinyStar.net');
+                    let adjData = data.replace(/burningbird\.com/g, 'shinyStar.net');
                     // write to file
                     fs.writeFile(`./data/${name}`, adjData, (err) => {
                         if (err) {
