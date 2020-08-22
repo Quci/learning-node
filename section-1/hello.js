@@ -7,7 +7,7 @@ http.createServer((req, res) => {
         name = 'world';
     }
     if (name === 'burningbird') {
-        let file = 'phoenix5a.png';
+        let file = './phoenix5a.png';
         fs.stat(file, (err, stat) => {
             if (err) {
                 console.log(err);
