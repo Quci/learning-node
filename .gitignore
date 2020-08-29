@@ -1,6 +1,2 @@
-/.idea/jsLibraryMappings.xml
-/.idea/learning-node.iml
-/.idea/modules.xml
-/.idea/inspectionProfiles/profiles_settings.xml
-/.idea/vcs.xml
-/.idea/workspace.xml
+/.idea/*
+/node_modules
